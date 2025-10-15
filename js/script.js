@@ -58,28 +58,6 @@ document.querySelectorAll('.project-link').forEach(link => {
     });
 });
 
-// Image error handling
-document.addEventListener('DOMContentLoaded', function() {
-    const profileImage = document.querySelector('.profile-image');
-    const profilePlaceholder = document.getElementById('profile-placeholder');
-    
-    if (profileImage) {
-        profileImage.onerror = function() {
-            this.style.display = 'none';
-            if (profilePlaceholder) {
-                profilePlaceholder.style.display = 'flex';
-            }
-        };
-        
-        // Check if image loaded successfully
-        if (profileImage.complete && profileImage.naturalHeight !== 0) {
-            if (profilePlaceholder) {
-                profilePlaceholder.style.display = 'none';
-            }
-        }
-    }
-});
-
 // Add animation on scroll
 function animateOnScroll() {
     const elements = document.querySelectorAll('.service-card, .skill-category, .project-card, .education-card');
